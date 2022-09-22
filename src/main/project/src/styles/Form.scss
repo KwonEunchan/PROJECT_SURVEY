@@ -1,0 +1,243 @@
+.formNav {
+  width: 50%;
+  height: 15%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .formSeq {
+    color: #C2C2C2;
+  }
+}
+
+.formBody {
+  width: 90%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  h1 {
+    font-size: 2vw;
+  }
+
+  h2 {
+    font-size: 1.2vw;
+    font-weight: 400;
+  }
+
+  .inputContainer {
+    width: 80%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+
+    .inputBox {
+      border: 1px solid #C2C2C2;
+      color: #C2C2C2;
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      &.focus {
+        border-color: #1B3F9E;
+        color: #1B3F9E;
+      }
+
+      &:nth-child(1) {
+        border-top-left-radius: .5vw;
+        border-top-right-radius: .5vw;
+      }
+
+      &:nth-child(2) {
+        border-top: none;
+        border-bottom-left-radius: .5vw;
+        border-bottom-right-radius: .5vw;
+
+        &.focus {
+          border-top: .5px solid #1B3F9E;
+        }
+      }
+
+      .inputLogo {
+        width: 20%;
+        height: 95%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+      }
+
+      .inputValue {
+        width: 75%;
+        height: 90%;
+        border: none;
+        outline: none;
+
+        &:focus {
+          color: #1B3F9E;
+          font-weight: 700;
+
+          &::placeholder {
+            font-weight: 400;
+          }
+        }
+
+        &::placeholder {
+          color: #C2C2C2;
+        }
+      }
+    }
+  }
+
+  .surveyBox {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    .surveyEl {
+      width: 100%;
+      height: 20%;
+      box-shadow: 0 0 .2vw 0 rgba(black, .4);
+      cursor: pointer;
+      transition: .2s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &.focus {
+        scale: 1.02;
+        background-color: rgba(#1B3F9E, .8);
+        color: white;
+      }
+
+      &:hover {
+        scale: 1.01;
+      }
+    }
+  }
+}
+
+.formFooter {
+  width: 80%;
+  height: 15%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .btn {
+    width: 40%;
+    height: 90%;
+    background-color: #545454;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5vw;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5vw;
+    transition: .5s;
+
+    &.active {
+      background-color: #1B3F9E;
+
+      &.btnResult {
+        background-color: #FC5230;
+      }
+    }
+
+    &:hover {
+      scale: 1.02;
+    }
+
+    &:active {
+      scale: .98;
+    }
+  }
+}
+
+.resultPage {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(black, .8);
+  z-index: 1;
+
+  .btnCancel {
+    color: white;
+    font-size: 3vw;
+    position: absolute;
+    right: 1vw;
+    top: 1vw;
+    cursor: pointer;
+  }
+
+  .resultForm {
+    width: 50vw;
+    height: 60vh;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    .resultHeader {
+      height: 20%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h5 {
+        font-size: 1vw;
+      }
+
+      h4 {
+        font-weight: 100;
+
+        .surveyNum {
+          font-size: 3vw;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .resultBody{
+      width: 80%;
+      height: 70%;
+      display: grid;
+      grid-row-gap: 1vw;
+      grid-template-rows: 8fr 1fr;
+      grid-template-columns: repeat(4, 1fr);
+      justify-items: center;
+      align-items: flex-end;
+
+
+      .resultName{
+        width: 80%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+      }
+
+      .resultBar{
+        width: 50%;
+        height: 1%;
+        background-color: black;
+        transition: 2s;
+      }
+    }
+  }
+}
