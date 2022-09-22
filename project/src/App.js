@@ -1,14 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Form from "./components/Form";
+
 
 function App() {
-  return (
-    <div className="App">
-      <form action="/hi" method="get">
-        <input type="submit"/>
-      </form>
-    </div>
-  );
+    return (<div className="App">
+        <div id="form">
+            <Form></Form>
+        </div>
+    </div>);
 }
 
 export default App;
